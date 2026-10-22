@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grow Therapy — Book your first session</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================= -->
+<!-- SCREEN: HOME                                                   -->
+<!-- ============================================================= -->
+<section class="screen" id="screen-home" data-screen>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <img class="logo" src="assets/grow-logo-ink.png" alt="Grow Therapy" />
+      <div class="nav-actions">
+        <button class="btn btn-ghost">Log in</button>
+        <button class="btn-icon" aria-label="Menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="display-sm">Mental health made easy,<br />covered by insurance</h1>
+
+        <div class="search-bar">
+          <button class="search-field" type="button">Talk therapy <span class="caret">&#9662;</span></button>
+          <button class="search-field" type="button">New York <span class="caret">&#9662;</span></button>
+          <button class="search-field" type="button">Insurance <span class="caret">&#9662;</span></button>
+          <button class="search-field" type="button">Needs <span class="caret">&#9662;</span></button>
+          <button class="btn btn-primary" data-goto="search">Find a provider</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="insurance-strip">
+      <div class="insurance-strip-inner">
+        <span>UnitedHealthcare</span>
+        <span>BlueCross BlueShield</span>
+        <span>Aetna</span>
+        <span>Cigna</span>
+        <span>Anthem</span>
+        <span>Humana</span>
+        <span>Medicaid</span>
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <div class="carousel-header">
+        <h2 class="heading-3">Available within 5 days</h2>
+        <div class="carousel-nav">
+          <button class="btn-icon btn-icon-sm" disabled aria-label="Previous">&larr;</button>
+          <button class="btn-icon btn-icon-sm" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+      <div class="carousel-row">
+
+        <article class="mini-card" data-goto="profile">
+          <div class="avatar avatar-photo avatar-card" data-initials="AJ"></div>
+          <p class="body-sm-medium mini-card-name">Alice Johnson, LCSW</p>
+          <div class="rating-row rating-row-sm">
+            <span class="stars" aria-label="4.5 out of 5 stars">★★★★★</span>
+            <span class="body-xs ink-muted">4.5 (120)</span>
+          </div>
+          <p class="body-xs ink-muted mini-card-specialty">CBT &middot; Anxiety Disorders +2 more</p>
+          <p class="body-xs mini-card-price">$20/session &middot; <span class="guarantee-inline">Guaranteed</span></p>
+        </article>
+
+        <article class="mini-card" data-goto="profile">
+          <div class="avatar avatar-photo avatar-card" data-initials="MS"></div>
+          <p class="body-sm-medium mini-card-name">Michelle Smith, LFP</p>
+          <div class="rating-row rating-row-sm">
+            <span class="stars" aria-label="3.8 out of 5 stars">★★★★★</span>
+            <span class="body-xs ink-muted">3.8 (90)</span>
+          </div>
+          <p class="body-xs ink-muted mini-card-specialty">Child Psychology &middot; Play Therapy +1 more</p>
+          <p class="body-xs mini-card-price">$28/session &middot; <span class="guarantee-inline">Guaranteed</span></p>
+        </article>
+
+        <article class="mini-card" data-goto="profile">
+          <div class="avatar avatar-photo avatar-card" data-initials="DD"></div>
+          <p class="body-sm-medium mini-card-name">David Davis, LCS</p>
+          <div class="rating-row rating-row-sm">
+            <span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span>
+            <span class="body-xs ink-muted">4.9 (200)</span>
+          </div>
+          <p class="body-xs ink-muted mini-card-specialty">Family Therapy &middot; Couples Counseling +3 more</p>
+          <p class="body-xs mini-card-price">$20/session &middot; <span class="guarantee-inline">Guaranteed</span></p>
+        </article>
+
+        <article class="mini-card" data-goto="profile">
+          <div class="avatar avatar-photo avatar-card" data-initials="DW"></div>
+          <p class="body-sm-medium mini-card-name">David Wilson, LCSW</p>
+          <div class="rating-row rating-row-sm">
+            <span class="stars" aria-label="4.2 out of 5 stars">★★★★★</span>
+            <span class="body-xs ink-muted">4.2 (85)</span>
+          </div>
+          <p class="body-xs ink-muted mini-card-specialty">Trauma Treatment &middot; Grief Counseling +1 more</p>
+          <p class="body-xs mini-card-price">$35/session &middot; <span class="guarantee-inline">Guaranteed</span></p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="stat-band">
+      <div class="stat-band-inner">
+        <div class="stat-band-copy">
+          <h2 class="heading-2">The right therapist for you is already on Grow</h2>
+          <p class="body-md ink-muted">
+            Get therapy and medication support in one place—virtual or in-person. No switching
+            apps, no repeating your story. Just care that fits your life.
+          </p>
+          <a href="#" class="link-inline">Learn more</a>
+        </div>
+
+        <div class="stat-tiles">
+          <div class="stat-tile stat-tile-light">
+            <p class="stat-tile-number">+90%</p>
+            <p class="body-sm">of Grow Clients find a provider who meets all their needs</p>
+          </div>
+          <div class="stat-tile stat-tile-brand">
+            <p class="stat-tile-number stat-tile-number-inverse">$21</p>
+            <p class="body-sm stat-tile-label">Average session cost with insurance</p>
+            <p class="body-sm stat-tile-guarantee">
+              That price is guaranteed before you book — no matter what happens with your coverage.
+            </p>
+            <button class="btn btn-primary-inverse" data-goto="search">See your guaranteed price</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <div class="carousel-header">
+        <h2 class="heading-3">Work on relationships and connection</h2>
+        <div class="carousel-nav">
+          <button class="btn-icon btn-icon-sm" disabled aria-label="Previous">&larr;</button>
+          <button class="btn-icon btn-icon-sm" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+      <div class="carousel-row">
+
+        <article class="mini-card" data-goto="profile">
+          <div class="avatar avatar-photo avatar-card" data-initials="RS"></div>
+          <p class="body-sm-medium mini-card-name">Rebecca Smith, LCS</p>
+          <div class="rating-row rating-row-sm">
+            <span class="stars" aria-label="4.8 out of 5 stars">★★★★★</span>
+            <span class="body-xs ink-muted">4.8 (95)</span>
+          </div>
+          <p class="body-xs ink-muted mini-card-specialty">Individual Counseling &middot; Group Therapy +1 more</p>
+          <p class="body-xs mini-card-price">$20/session &middot; <span class="guarantee-inline">Guaranteed</span></p>
+        </article>
+
+        <article class="mini-card" data-goto="profile">
+          <div class="avatar avatar-photo avatar-card" data-initials="CB"></div>
+          <p class="body-sm-medium mini-card-name">Charlie Brown, LCSW</p>
+          <div class="rating-row rating-row-sm">
+            <span class="stars" aria-label="4.2 out of 5 stars">★★★★★</span>
+            <span class="body-xs ink-muted">4.2 (110)</span>
+          </div>
+          <p class="body-xs ink-muted mini-card-specialty">Behavioral Therapy &middot; Couples Therapy +3 more</p>
+          <p class="body-xs mini-card-price">$40/session &middot; <span class="guarantee-inline">Guaranteed</span></p>
+        </article>
+
+        <article class="mini-card" data-goto="profile">
+          <div class="avatar avatar-photo avatar-card" data-initials="DP"></div>
+          <p class="body-sm-medium mini-card-name">Diana Prince, LSW</p>
+          <div class="rating-row rating-row-sm">
+            <span class="stars" aria-label="4.7 out of 5 stars">★★★★★</span>
+            <span class="body-xs ink-muted">4.7 (88)</span>
+          </div>
+          <p class="body-xs ink-muted mini-card-specialty">Trauma-Informed Care &middot; Play Therapy +2 more</p>
+          <p class="body-xs mini-card-price">$20/session &middot; <span class="guarantee-inline">Guaranteed</span></p>
+        </article>
+
+        <article class="mini-card" data-goto="profile">
+          <div class="avatar avatar-photo avatar-card" data-initials="EE"></div>
+          <p class="body-sm-medium mini-card-name">Edwina Elric, PMHNP</p>
+          <div class="rating-row rating-row-sm">
+            <span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span>
+            <span class="body-xs ink-muted">4.9 (60)</span>
+          </div>
+          <p class="body-xs ink-muted mini-card-specialty">Dialectical Behavior Therapy &middot; Mindfulness</p>
+          <p class="body-xs mini-card-price">$30/session &middot; <span class="guarantee-inline">Guaranteed</span></p>
+        </article>
+
+      </div>
+    </section>
+
+    <p class="body-sm ink-muted inline-repeat">
+      Average session cost $21 with insurance — guaranteed &middot; <a href="#" class="link-inline" data-goto="search">See how it works</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <img class="logo logo-sm" src="assets/grow-logo-ink.png" alt="Grow Therapy" />
+      <span class="body-xs ink-muted">&copy; 2026 Grow Therapy. Prototype for internal design review — not a production site.</span>
+    </div>
+  </footer>
+</section>
+
+
+<!-- ============================================================= -->
+<!-- SCREEN: SEARCH RESULTS                                         -->
+<!-- ============================================================= -->
+<section class="screen" id="screen-search" data-screen hidden>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <img class="logo" src="assets/grow-logo-ink.png" alt="Grow Therapy" />
+      <div class="nav-actions">
+        <button class="btn btn-ghost" data-goto="home">Save &amp; exit</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-bar">
+    <div class="filter-bar-inner">
+      <button class="search-field" type="button">Talk Therapy <span class="caret">&#9662;</span></button>
+      <button class="search-field" type="button">New York <span class="caret">&#9662;</span></button>
+      <button class="search-field" type="button">Aetna <span class="caret">&#9662;</span></button>
+      <button class="search-field" type="button">Needs (2) <span class="caret">&#9662;</span></button>
+      <button class="btn btn-secondary btn-sm">More filters</button>
+    </div>
+  </div>
+
+  <main class="srp-page">
+    <div class="srp-page-inner">
+      <h1 class="heading-2">24 provider matches</h1>
+      <p class="body-sm ink-muted srp-sub">On average, Aetna clients pay $20&ndash;40 — and your price is guaranteed before you book.</p>
+
+      <div class="srp-list">
+
+        <article class="srp-card card-base">
+          <div class="avatar avatar-photo avatar-srp" data-initials="MC"></div>
+          <div class="srp-card-body">
+            <h3 class="heading-3">Maya Chen, LMFT</h3>
+            <p class="body-sm ink-muted">LMFT, 9 years of experience</p>
+            <div class="rating-row">
+              <span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span>
+              <span class="body-sm ink-muted">4.9 (128)</span>
+            </div>
+            <div class="availability-row body-sm ink-muted">
+              <span>&#128197; Available Thu, Oct 29</span>
+              <span>&#128250; Virtual</span>
+              <span>&#128205; In-person, Oakland, 2.1 miles</span>
+            </div>
+            <p class="body-sm srp-bio">
+              Maya has spent the last nine years helping people work through anxiety, burnout,
+              and relationship stress. She takes a practical, collaborative approach&hellip;
+              <a href="#" class="link-inline">read more</a>
+            </p>
+            <div class="tag-row">
+              <span class="tag tag-wilson">Anxiety</span>
+              <span class="tag tag-wilson">Relationships</span>
+              <span class="tag tag-wilson">Burnout</span>
+              <span class="tag tag-neutral">+2 more</span>
+            </div>
+            <div class="srp-card-actions">
+              <button class="btn btn-primary btn-sm" data-goto="booking">Book session</button>
+              <button class="btn btn-secondary btn-sm" data-goto="profile">View profile</button>
+              <div class="price-block price-block-inline">
+                <div class="card-price">
+                  <span class="card-price-amount">$20</span>
+                  <span class="card-price-caption">per session with Aetna</span>
+                </div>
+                <span class="badge badge-ziggy badge-sm">
+                  <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                  First-Session Guarantee
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="srp-card card-base">
+          <div class="avatar avatar-photo avatar-srp" data-initials="JO"></div>
+          <div class="srp-card-body">
+            <h3 class="heading-3">James Okafor, LCSW</h3>
+            <p class="body-sm ink-muted">LCSW, 6 years of experience</p>
+            <div class="rating-row">
+              <span class="stars" aria-label="4.8 out of 5 stars">★★★★★</span>
+              <span class="body-sm ink-muted">4.8 (94)</span>
+            </div>
+            <div class="availability-row body-sm ink-muted">
+              <span>&#128197; Available Fri, Oct 30</span>
+              <span>&#128250; Virtual</span>
+            </div>
+            <p class="body-sm srp-bio">
+              James helps clients work through depression, grief, and major life transitions
+              using a steady, no-pressure approach&hellip;
+              <a href="#" class="link-inline">read more</a>
+            </p>
+            <div class="tag-row">
+              <span class="tag tag-wilson">Depression</span>
+              <span class="tag tag-wilson">Grief</span>
+              <span class="tag tag-wilson">Men's issues</span>
+            </div>
+            <div class="srp-card-actions">
+              <button class="btn btn-primary btn-sm" data-goto="booking">Book session</button>
+              <button class="btn btn-secondary btn-sm" data-goto="profile">View profile</button>
+              <div class="price-block price-block-inline">
+                <div class="card-price">
+                  <span class="card-price-amount">$20</span>
+                  <span class="card-price-caption">per session with Aetna</span>
+                </div>
+                <span class="badge badge-ziggy badge-sm">
+                  <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                  First-Session Guarantee
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="srp-card card-base">
+          <div class="avatar avatar-photo avatar-srp" data-initials="PR"></div>
+          <div class="srp-card-body">
+            <h3 class="heading-3">Priya Raman, PhD</h3>
+            <p class="body-sm ink-muted">PhD, 12 years of experience</p>
+            <div class="rating-row">
+              <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="body-sm ink-muted">5.0 (61)</span>
+            </div>
+            <div class="availability-row body-sm ink-muted">
+              <span>&#128197; Available Mon, Nov 2</span>
+              <span>&#128250; Virtual</span>
+              <span>&#128205; In-person, Berkeley, 4.3 miles</span>
+            </div>
+            <p class="body-sm srp-bio">
+              Priya specializes in trauma and postpartum support, blending evidence-based
+              methods with a warm, collaborative style&hellip;
+              <a href="#" class="link-inline">read more</a>
+            </p>
+            <div class="tag-row">
+              <span class="tag tag-wilson">Trauma</span>
+              <span class="tag tag-wilson">Anxiety</span>
+              <span class="tag tag-wilson">Postpartum</span>
+            </div>
+            <div class="srp-card-actions">
+              <button class="btn btn-primary btn-sm" data-goto="booking">Book session</button>
+              <button class="btn btn-secondary btn-sm" data-goto="profile">View profile</button>
+              <div class="price-block price-block-inline">
+                <div class="card-price">
+                  <span class="card-price-amount">$35</span>
+                  <span class="card-price-caption">per session with Aetna</span>
+                </div>
+                <span class="badge badge-ziggy badge-sm">
+                  <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                  First-Session Guarantee
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <section class="faq-section">
+        <h2 class="heading-2">Frequently asked questions</h2>
+
+        <details class="faq-item" open>
+          <summary class="body-md-medium">How much will I pay for my first session?</summary>
+          <div class="faq-answer body-sm">
+            <p>
+              If you have insurance, you'll verify your plan when you book and we'll show your
+              exact session cost before you confirm — and guarantee it. That price won't change,
+              even if:
+            </p>
+            <ul class="faq-list">
+              <li>Your insurance changes or lapses</li>
+              <li>Your insurer denies the claim</li>
+              <li>Your therapist bills a different code</li>
+              <li>Your deductible turns out to be different than expected</li>
+            </ul>
+            <p>
+              If you don't have insurance, you can pay cash — individual therapist rates are
+              shown on their profile. Applies to your first session; not yet available for
+              Medicare or Medicaid.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="body-md-medium">How does the Specialty Filter work? Can I find a therapist that focuses on a specific issue?</summary>
+          <div class="faq-answer body-sm">
+            <p>Select one or more specialties under "Needs" and we'll only show providers who list that focus area.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="body-md-medium">Why use Gender, Age, and Identities filters?</summary>
+          <div class="faq-answer body-sm">
+            <p>Many clients feel most comfortable working with a therapist who shares or understands their background. These filters are optional.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="body-md-medium">What to expect during your first session?</summary>
+          <div class="faq-answer body-sm">
+            <p>Your first session is about getting to know each other — your therapist will ask about what brought you to therapy and what you're hoping to get out of it. There's no homework due before you start.</p>
+          </div>
+        </details>
+      </section>
+    </div>
+  </main>
+</section>
+
+
+<!-- ============================================================= -->
+<!-- SCREEN: PROVIDER PROFILE                                       -->
+<!-- ============================================================= -->
+<section class="screen" id="screen-profile" data-screen hidden>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <img class="logo" src="assets/grow-logo-ink.png" alt="Grow Therapy" />
+      <div class="nav-actions">
+        <button class="btn btn-ghost" data-goto="home">Save &amp; exit</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-page">
+    <div class="profile-page-inner">
+      <button class="link-back" data-goto="search">&larr; Back to results</button>
+
+      <div class="profile-header">
+        <div class="avatar avatar-photo avatar-xl" data-initials="MC"></div>
+        <div class="profile-header-info">
+          <h1 class="heading-1">Maya Chen, LMFT</h1>
+          <p class="body-sm ink-muted">LMFT, 9 years of experience</p>
+          <div class="rating-row">
+            <span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span>
+            <span class="body-sm ink-muted">4.9 (128 reviews)</span>
+            <span class="tag tag-wilson">Licensed in California</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-layout">
+        <div class="profile-main">
+          <section class="profile-section">
+            <h2 class="heading-3">About Maya</h2>
+            <p class="body-md">
+              Maya has spent the last nine years helping people work through anxiety, burnout,
+              and relationship stress. She takes a practical, collaborative approach — you'll
+              leave sessions with things to try, not just things to think about. Maya believes
+              progress looks different for everyone, and the first few sessions are about
+              figuring out what that looks like for you.
+            </p>
+          </section>
+
+          <section class="profile-section">
+            <h2 class="heading-3">Specialties</h2>
+            <div class="tag-row">
+              <span class="tag tag-wilson">Anxiety</span>
+              <span class="tag tag-wilson">Relationships</span>
+              <span class="tag tag-wilson">Burnout</span>
+              <span class="tag tag-wilson">Life transitions</span>
+            </div>
+          </section>
+
+          <section class="profile-section">
+            <h2 class="heading-3">Approach</h2>
+            <div class="tag-row">
+              <span class="tag tag-neutral">Cognitive Behavioral Therapy</span>
+              <span class="tag tag-neutral">Mindfulness-based</span>
+              <span class="tag tag-neutral">Solution-focused</span>
+            </div>
+          </section>
+
+          <section class="profile-section">
+            <h2 class="heading-3">What clients say</h2>
+            <blockquote class="review-quote">
+              "Maya listens without judgment and actually remembers what we talked about last
+              time. It never feels like starting over."
+              <cite class="body-xs ink-muted">— Grow client, 5 sessions</cite>
+            </blockquote>
+          </section>
+        </div>
+
+        <aside class="profile-sidebar card-base">
+          <p class="body-sm ink-muted">Next available: Thu, Oct 29</p>
+          <div class="card-price card-price-sidebar">
+            <span class="card-price-amount">$20</span>
+            <span class="card-price-caption">per session with Aetna PPO</span>
+          </div>
+          <span class="badge badge-ziggy badge-sm">
+            <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            First-Session Guarantee
+          </span>
+          <button class="btn btn-primary btn-full" data-goto="booking">Book session</button>
+          <p class="body-xs ink-muted sidebar-reassurance">
+            Next: pick a time, add a few details, then confirm your guaranteed price — no payment
+            required yet.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </main>
+</section>
+
+
+<!-- ============================================================= -->
+<!-- SCREEN: BOOKING                                                -->
+<!-- ============================================================= -->
+<section class="screen" id="screen-booking" data-screen hidden>
+
+  <header class="nav nav-minimal">
+    <div class="nav-inner">
+      <img class="logo logo-sm" src="assets/grow-logo-ink.png" alt="Grow Therapy" />
+      <span class="body-sm ink-muted booking-context">Booking with Maya Chen, LMFT</span>
+      <div class="nav-actions">
+        <button class="btn btn-ghost" data-goto="home">Save &amp; exit</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="stepper">
+    <div class="stepper-inner">
+      <div class="step" data-step-indicator="time">
+        <span class="step-dot">1</span>
+        <span class="step-label">Time</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step-indicator="details">
+        <span class="step-dot">2</span>
+        <span class="step-label">Details</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step-indicator="cost">
+        <span class="step-dot">3</span>
+        <span class="step-label">Session cost</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="booking-page">
+    <div class="booking-layout">
+
+      <div class="booking-main">
+
+        <!-- STEP: TIME -->
+        <div class="booking-step" data-step="time">
+          <h1 class="heading-2">Pick a time that works for you</h1>
+          <p class="body-sm ink-muted">All times shown in your local time zone.</p>
+
+          <div class="day-group">
+            <h3 class="body-md-medium day-heading">Thursday, Oct 29</h3>
+            <div class="slot-row">
+              <button class="chip slot" type="button" data-slot="Thu, Oct 29 · 2:00 PM">2:00 PM</button>
+              <button class="chip slot slot-selected" type="button" data-slot="Thu, Oct 29 · 4:30 PM">4:30 PM</button>
+              <button class="chip slot" type="button" data-slot="Thu, Oct 29 · 6:00 PM">6:00 PM</button>
+            </div>
+          </div>
+          <div class="day-group">
+            <h3 class="body-md-medium day-heading">Friday, Oct 30</h3>
+            <div class="slot-row">
+              <button class="chip slot" type="button" data-slot="Fri, Oct 30 · 9:00 AM">9:00 AM</button>
+              <button class="chip slot" type="button" data-slot="Fri, Oct 30 · 1:00 PM">1:00 PM</button>
+            </div>
+          </div>
+          <div class="day-group">
+            <h3 class="body-md-medium day-heading">Monday, Nov 2</h3>
+            <div class="slot-row">
+              <button class="chip slot" type="button" data-slot="Mon, Nov 2 · 5:30 PM">5:30 PM</button>
+              <button class="chip slot" type="button" data-slot="Mon, Nov 2 · 7:00 PM">7:00 PM</button>
+            </div>
+          </div>
+
+          <div class="step-actions step-actions-end">
+            <button class="btn btn-primary" data-step-next="details">Continue</button>
+          </div>
+        </div>
+
+        <!-- STEP: DETAILS -->
+        <div class="booking-step" data-step="details" hidden>
+          <h1 class="heading-2">A few details before we check your coverage</h1>
+
+          <div class="form-grid">
+            <div class="field">
+              <label class="field-label" for="fullname">Full name</label>
+              <input id="fullname" class="text-input" type="text" value="Jordan Avery" />
+            </div>
+            <div class="field">
+              <label class="field-label" for="dob">Date of birth</label>
+              <input id="dob" class="text-input" type="text" value="04/12/1994" />
+            </div>
+            <div class="field">
+              <label class="field-label" for="phone">Phone</label>
+              <input id="phone" class="text-input" type="text" value="(555) 019-2834" />
+            </div>
+            <div class="field">
+              <label class="field-label" for="email">Email</label>
+              <input id="email" class="text-input" type="text" value="jordan.avery@email.com" />
+            </div>
+          </div>
+
+          <h2 class="heading-3 insurance-heading">Insurance</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label class="field-label" for="carrier">Insurance carrier</label>
+              <select id="carrier" class="text-input">
+                <option selected>Aetna PPO</option>
+                <option>Cigna</option>
+                <option>UnitedHealthcare</option>
+                <option>Blue Cross Blue Shield</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label" for="member-id">Member ID</label>
+              <input id="member-id" class="text-input" type="text" value="AET-88214502" />
+            </div>
+          </div>
+
+          <p class="body-sm coverage-note">
+            We'll check your plan and show your guaranteed price next — this usually takes
+            about 12 seconds.
+          </p>
+
+          <label class="consent-row">
+            <input type="checkbox" checked />
+            <span class="body-sm">I agree to Grow's Telehealth Consent and Privacy Policy.</span>
+          </label>
+
+          <div class="step-actions">
+            <button class="btn btn-secondary" data-step-prev="time">Back</button>
+            <button class="btn btn-primary" data-step-next="cost">Check my price</button>
+          </div>
+        </div>
+
+        <!-- STEP: SESSION COST -->
+        <div class="booking-step" data-step="cost" hidden>
+
+          <div class="cost-loading" data-cost-loading>
+            <div class="spinner" aria-hidden="true"></div>
+            <p class="body-md">Checking your coverage with Aetna PPO&hellip;</p>
+            <p class="body-sm ink-muted">Usually takes about 12 seconds.</p>
+          </div>
+
+          <div class="cost-result" data-cost-result hidden>
+            <span class="badge badge-ziggy">
+              <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              First-Session Guarantee
+            </span>
+            <h1 class="heading-2">Your guaranteed price for this session</h1>
+            <div class="price-display">
+              <span class="price-number">$20</span>
+              <span class="body-sm ink-muted">per session</span>
+            </div>
+            <p class="body-md">
+              Based on your Aetna PPO plan. This is what you'll pay for your first session with
+              Maya — no matter what.
+            </p>
+
+            <h2 class="heading-3 covered-heading">What's covered by the guarantee</h2>
+            <div class="guarantee-grid" id="guarantee-grid-cost"></div>
+
+            <p class="body-sm accuracy-note">
+              96% of our estimates are exactly right. When they're not, the guarantee covers
+              the difference — not you.
+            </p>
+            <p class="body-xs ink-muted guarantee-footnote">
+              Applies to your first session with Grow. Available for commercial insurance plans
+              — not yet available for Medicare or Medicaid.
+            </p>
+
+            <div class="step-actions">
+              <button class="btn btn-secondary" data-step-prev="details">Back</button>
+              <button class="btn btn-primary btn-lg" data-goto="confirmation">Book this session — $20</button>
+            </div>
+            <p class="body-xs ink-muted fine-print">
+              You won't be charged now. We'll bill your insurance and collect your guaranteed
+              price after your session.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <aside class="booking-summary card-base">
+        <h3 class="heading-3">Your appointment</h3>
+        <div class="summary-provider">
+          <div class="avatar avatar-photo avatar-md" data-initials="MC"></div>
+          <div>
+            <p class="body-md-medium">Maya Chen, LMFT</p>
+            <p class="body-xs ink-muted">Video session</p>
+          </div>
+        </div>
+
+        <dl class="summary-list">
+          <div class="summary-row">
+            <dt class="body-sm ink-muted">Time</dt>
+            <dd class="body-sm-medium" data-summary="time">Thu, Oct 29 · 4:30 PM</dd>
+          </div>
+          <div class="summary-row" data-summary-row="insurance" hidden>
+            <dt class="body-sm ink-muted">Insurance</dt>
+            <dd class="body-sm-medium" data-summary="insurance">Aetna PPO</dd>
+          </div>
+        </dl>
+
+        <div class="summary-price" data-summary-price>
+          <p class="body-xs ink-muted">Your guaranteed price will appear here once we check your coverage.</p>
+        </div>
+
+        <div class="summary-guarantee">
+          <span class="badge badge-ziggy badge-sm">
+            <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            First-Session Guarantee
+          </span>
+          <p class="body-xs ink-muted">Your price is locked once we check your coverage — and guaranteed from there.</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+</section>
+
+
+<!-- ============================================================= -->
+<!-- SCREEN: CONFIRMATION                                           -->
+<!-- ============================================================= -->
+<section class="screen" id="screen-confirmation" data-screen hidden>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <img class="logo" src="assets/grow-logo-ink.png" alt="Grow Therapy" />
+      <div class="nav-actions">
+        <button class="btn btn-ghost" data-goto="home">Return to homepage</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="confirmation-page">
+    <div class="confirmation-inner">
+      <div class="success-icon">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/><path d="M14 24.5L20.5 31L34 17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h1 class="heading-1">You're booked!</h1>
+      <p class="body-md ink-muted">We've sent a confirmation to jordan.avery@email.com.</p>
+
+      <div class="receipt card-base">
+        <div class="summary-provider">
+          <div class="avatar avatar-photo avatar-md" data-initials="MC"></div>
+          <div>
+            <p class="body-md-medium">Maya Chen, LMFT</p>
+            <p class="body-xs ink-muted">Video session</p>
+          </div>
+        </div>
+        <dl class="summary-list">
+          <div class="summary-row">
+            <dt class="body-sm ink-muted">Time</dt>
+            <dd class="body-sm-medium">Thu, Oct 29 · 4:30 PM</dd>
+          </div>
+          <div class="summary-row">
+            <dt class="body-sm ink-muted">Insurance</dt>
+            <dd class="body-sm-medium">Aetna PPO</dd>
+          </div>
+        </dl>
+        <div class="receipt-price">
+          <span class="body-sm ink-muted">Your guaranteed price</span>
+          <span class="price-number price-number-sm">$20</span>
+          <span class="badge badge-ziggy badge-sm">
+            <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Guaranteed
+          </span>
+        </div>
+        <p class="body-xs ink-muted">This won't change, no matter what happens between now and your session.</p>
+      </div>
+
+      <h2 class="heading-3 next-steps-heading">What happens next</h2>
+      <ul class="next-steps-list body-md">
+        <li>We'll email a short intake form to complete before your session.</li>
+        <li>You'll get a reminder and video link 1 hour before your appointment.</li>
+        <li>Your guaranteed price is billed to your insurance after the session — nothing due now.</li>
+      </ul>
+
+      <div class="step-actions step-actions-center">
+        <button class="btn btn-secondary">Add to calendar</button>
+        <button class="btn btn-ghost" data-goto="home">Return to homepage</button>
+      </div>
+
+      <p class="body-xs ink-muted backed-by">Backed by Grow's First-Session Guarantee.</p>
+    </div>
+  </main>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
