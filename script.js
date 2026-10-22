@@ -79,20 +79,25 @@ document.addEventListener("click", (e) => {
 // Homepage quote widget (mock coverage lookup)
 // ---------------------------------------------------------------
 const QUOTE_RATES = [
-  { match: /aetna/i, amount: 20, label: "Aetna" },
-  { match: /cigna/i, amount: 25, label: "Cigna" },
-  { match: /united/i, amount: 30, label: "UnitedHealthcare" },
-  { match: /blue\s*cross|bcbs/i, amount: 22, label: "Blue Cross Blue Shield" },
-  { match: /humana/i, amount: 18, label: "Humana" },
-  { match: /medicaid/i, amount: 0, label: "Medicaid" },
+  { match: /aetna/i, min: 20, max: 35, label: "Aetna" },
+  { match: /cigna/i, min: 25, max: 40, label: "Cigna" },
+  { match: /united/i, min: 30, max: 45, label: "UnitedHealthcare" },
+  { match: /blue\s*cross|bcbs/i, min: 22, max: 38, label: "Blue Cross Blue Shield" },
+  { match: /humana/i, min: 18, max: 32, label: "Humana" },
+  { match: /medicaid/i, min: 0, max: 0, label: "Medicaid" },
 ];
 
 function lookupQuote(insurerRaw) {
   const insurer = insurerRaw.trim();
   const found = QUOTE_RATES.find((r) => r.match.test(insurer));
   if (found) return found;
-  if (insurer) return { amount: 21, label: insurer };
-  return { amount: 21, label: "your plan" };
+  if (insurer) return { min: 18, max: 40, label: insurer };
+  return { min: 18, max: 40, label: "your plan" };
+}
+
+function formatQuoteRange(quote) {
+  if (quote.min === quote.max) return "$" + quote.min;
+  return "$" + quote.min + "–$" + quote.max;
 }
 
 document.addEventListener("submit", (e) => {
@@ -116,9 +121,11 @@ document.addEventListener("submit", (e) => {
     const firstName = name.split(" ")[0];
     const greeting = firstName ? `Hi ${firstName} — ` : "";
 
-    resultEl.querySelector("[data-quote-amount]").textContent = "$" + quote.amount;
+    resultEl.querySelector("[data-quote-amount]").textContent = formatQuoteRange(quote);
     resultEl.querySelector("[data-quote-label]").textContent =
-      `${greeting}your estimated price with ${quote.label}`;
+      quote.min === quote.max
+        ? `${greeting}your estimated price with ${quote.label}`
+        : `${greeting}your estimated range with ${quote.label}`;
 
     loadingEl.hidden = true;
     resultEl.hidden = false;
