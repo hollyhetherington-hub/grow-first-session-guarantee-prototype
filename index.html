@@ -125,13 +125,54 @@
             <p class="stat-tile-number">+90%</p>
             <p class="body-sm">of Grow Clients find a provider who meets all their needs</p>
           </div>
-          <div class="stat-tile stat-tile-brand">
-            <p class="stat-tile-number stat-tile-number-inverse">$21</p>
-            <p class="body-sm stat-tile-label">Average session cost with insurance</p>
-            <p class="body-sm stat-tile-guarantee">
-              That price is guaranteed before you book — no matter what happens with your coverage.
-            </p>
-            <button class="btn btn-primary-inverse" data-goto="search">See your guaranteed price</button>
+          <div class="stat-tile stat-tile-brand quote-tile">
+
+            <div class="quote-default" data-quote-default>
+              <p class="stat-tile-number stat-tile-number-inverse">$21</p>
+              <p class="body-sm stat-tile-label">Average session cost with insurance</p>
+              <p class="body-sm stat-tile-guarantee">
+                That price is guaranteed before you book — no matter what happens with your coverage.
+              </p>
+
+              <form class="quote-form" data-quote-form>
+                <p class="body-sm-medium quote-form-title">Get your price with your plan</p>
+                <div class="quote-field">
+                  <label class="quote-label" for="quote-insurer">Insurance company</label>
+                  <input id="quote-insurer" class="quote-input" type="text" placeholder="e.g., Aetna" required />
+                </div>
+                <div class="quote-row">
+                  <div class="quote-field">
+                    <label class="quote-label" for="quote-name">Your name</label>
+                    <input id="quote-name" class="quote-input" type="text" placeholder="Jordan Avery" required />
+                  </div>
+                  <div class="quote-field">
+                    <label class="quote-label" for="quote-dob">Date of birth</label>
+                    <input id="quote-dob" class="quote-input" type="text" placeholder="MM/DD/YYYY" required />
+                  </div>
+                </div>
+                <button class="btn btn-primary-inverse btn-full" type="submit">Get my price</button>
+              </form>
+
+              <button class="link-inline-inverse" type="button" data-goto="search">Or browse providers without a quote</button>
+            </div>
+
+            <div class="quote-loading" data-quote-loading hidden>
+              <div class="spinner spinner-inverse" aria-hidden="true"></div>
+              <p class="body-sm">Checking your coverage&hellip;</p>
+            </div>
+
+            <div class="quote-result" data-quote-result hidden>
+              <p class="stat-tile-number stat-tile-number-inverse" data-quote-amount>$20</p>
+              <p class="body-sm stat-tile-label" data-quote-label>Your estimated price with Aetna</p>
+              <p class="body-sm stat-tile-guarantee">
+                That price is guaranteed before you book — no matter what happens with your coverage.
+              </p>
+              <div class="quote-result-actions">
+                <button class="btn btn-primary-inverse" data-goto="search">Find a provider</button>
+                <button class="link-inline-inverse" type="button" data-quote-reset>Check a different plan</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

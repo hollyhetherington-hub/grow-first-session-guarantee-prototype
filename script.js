@@ -76,6 +76,66 @@ document.addEventListener("click", (e) => {
 });
 
 // ---------------------------------------------------------------
+// Homepage quote widget (mock coverage lookup)
+// ---------------------------------------------------------------
+const QUOTE_RATES = [
+  { match: /aetna/i, amount: 20, label: "Aetna" },
+  { match: /cigna/i, amount: 25, label: "Cigna" },
+  { match: /united/i, amount: 30, label: "UnitedHealthcare" },
+  { match: /blue\s*cross|bcbs/i, amount: 22, label: "Blue Cross Blue Shield" },
+  { match: /humana/i, amount: 18, label: "Humana" },
+  { match: /medicaid/i, amount: 0, label: "Medicaid" },
+];
+
+function lookupQuote(insurerRaw) {
+  const insurer = insurerRaw.trim();
+  const found = QUOTE_RATES.find((r) => r.match.test(insurer));
+  if (found) return found;
+  if (insurer) return { amount: 21, label: insurer };
+  return { amount: 21, label: "your plan" };
+}
+
+document.addEventListener("submit", (e) => {
+  const form = e.target.closest("[data-quote-form]");
+  if (!form) return;
+  e.preventDefault();
+
+  const tile = form.closest(".quote-tile");
+  const defaultEl = tile.querySelector("[data-quote-default]");
+  const loadingEl = tile.querySelector("[data-quote-loading]");
+  const resultEl = tile.querySelector("[data-quote-result]");
+  const insurer = tile.querySelector("#quote-insurer").value;
+  const name = tile.querySelector("#quote-name").value.trim();
+
+  defaultEl.hidden = true;
+  resultEl.hidden = true;
+  loadingEl.hidden = false;
+
+  window.setTimeout(() => {
+    const quote = lookupQuote(insurer);
+    const firstName = name.split(" ")[0];
+    const greeting = firstName ? `Hi ${firstName} — ` : "";
+
+    resultEl.querySelector("[data-quote-amount]").textContent = "$" + quote.amount;
+    resultEl.querySelector("[data-quote-label]").textContent =
+      `${greeting}your estimated price with ${quote.label}`;
+
+    loadingEl.hidden = true;
+    resultEl.hidden = false;
+  }, 1200);
+});
+
+document.addEventListener("click", (e) => {
+  const resetBtn = e.target.closest("[data-quote-reset]");
+  if (resetBtn) {
+    const tile = resetBtn.closest(".quote-tile");
+    tile.querySelector("[data-quote-form]").reset();
+    tile.querySelector("[data-quote-result]").hidden = true;
+    tile.querySelector("[data-quote-default]").hidden = false;
+  }
+});
+
+// ---------------------------------------------------------------
 // Booking flow state
 // ---------------------------------------------------------------
 const STEP_ORDER = ["time", "details", "cost"];
