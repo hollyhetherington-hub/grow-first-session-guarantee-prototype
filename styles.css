@@ -30,6 +30,9 @@
   --error: #ff5e48;
   --error-text: #c74d3a;
   --error-border: #e35541;
+  --info-surface: #7d8fe0;
+  --info-surface-subtle: #f3f3fc;
+  --info-text: #1d1f2c;
 
   --accent-wilson: #e3dfda;
   --accent-ziggy: #4c1d44;
@@ -394,16 +397,14 @@ button.guarantee-icon-badge:hover { background: var(--primary-hover); }
 .srp-card-actions { display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-lg); }
 .price-block-inline { margin-left: auto; }
 
-.faq-section { border-top: 1px solid var(--hairline-soft); padding-top: var(--space-xxl); }
-.faq-section h2 { margin-bottom: var(--space-lg); }
-.faq-item { border-bottom: 1px solid var(--hairline-soft); padding: var(--space-lg) 0; }
-.faq-item summary { cursor: pointer; list-style: none; }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: "+"; float: right; color: var(--ink-muted); font-size: 18px; }
-.faq-item[open] summary::after { content: "–"; }
-.faq-answer { margin-top: var(--space-md); color: var(--ink-secondary); display: flex; flex-direction: column; gap: var(--space-sm); }
-.faq-list { display: flex; flex-direction: column; gap: 4px; padding-left: var(--space-lg); list-style: disc; }
-.faq-list li { display: list-item; }
+.out-of-network-note {
+  margin-top: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--info-surface-subtle);
+  color: var(--info-text);
+  border: 1px solid var(--info-surface);
+  border-radius: var(--radius-sm);
+}
 
 /* ============================================================
    Provider profile
