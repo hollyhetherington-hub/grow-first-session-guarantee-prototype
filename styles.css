@@ -285,6 +285,11 @@ main { display: block; }
   flex-shrink: 0;
 }
 .guarantee-icon-badge .icon { width: 11px; height: 11px; }
+.guarantee-icon-badge-inverse { background: var(--on-primary); color: var(--primary); }
+
+.quote-guarantee-note { display: flex; align-items: flex-start; gap: var(--space-sm); margin-top: var(--space-lg); max-width: 420px; }
+.quote-guarantee-note .guarantee-icon-badge { margin-top: 2px; }
+.quote-guarantee-text { opacity: 0.85; margin: 0; }
 
 /* Stat band (evolves the existing "average session cost" tile) */
 .stat-band { max-width: 1120px; margin: 0 auto; padding: var(--space-section-sm) var(--space-xxl); }

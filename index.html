@@ -156,7 +156,7 @@
               <p class="body-sm stat-tile-label">Average session cost with insurance</p>
 
               <form class="quote-form" data-quote-form>
-                <p class="body-sm-medium quote-form-title">Get your price with your plan</p>
+                <p class="body-sm-medium quote-form-title">Get your first-session cost with your plan</p>
                 <div class="quote-field">
                   <label class="quote-label" for="quote-insurer">Insurance company</label>
                   <input id="quote-insurer" class="quote-input" type="text" placeholder="e.g., Aetna" required />
@@ -174,7 +174,15 @@
                 <button class="btn btn-primary-inverse btn-full" type="submit">Get my price</button>
               </form>
 
-              <button class="link-inline-inverse" type="button" data-goto="search">Or browse providers without a quote</button>
+              <div class="quote-guarantee-note">
+                <span class="guarantee-icon-badge guarantee-icon-badge-inverse" title="Guaranteed — this price won't change">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12.2L10.8 14.5L15.6 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <p class="body-xs quote-guarantee-text">
+                  Whatever price you get back, it's guaranteed for your first session — no matter
+                  what happens with your coverage.
+                </p>
+              </div>
             </div>
 
             <div class="quote-loading" data-quote-loading hidden>
