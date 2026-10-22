@@ -161,7 +161,7 @@ main { display: block; }
 .btn-sm { height: 42px; padding: 0 var(--space-lg); font-size: 14px; }
 .btn-lg { height: 62px; padding: 0 var(--space-xxxl); font-size: 16px; }
 .btn-full { width: 100%; }
-.link-inline { font-size: 14px; font-weight: 550; text-decoration: underline; cursor: pointer; }
+.link-inline { font-size: 14px; font-weight: 550; text-decoration: underline; cursor: pointer; background: none; border: none; padding: 0; color: var(--accent-link); font-family: inherit; }
 .link-back { background: none; border: none; color: var(--ink-muted); font-size: 14px; padding: 0 0 var(--space-lg); }
 
 /* ============================================================
@@ -283,9 +283,25 @@ main { display: block; }
   background: var(--accent-ziggy);
   color: var(--on-primary);
   flex-shrink: 0;
+  border: none;
+  padding: 0;
+  font: inherit;
 }
+button.guarantee-icon-badge { cursor: pointer; }
+button.guarantee-icon-badge:hover { background: var(--primary-hover); }
 .guarantee-icon-badge .icon { width: 11px; height: 11px; }
 .guarantee-icon-badge-inverse { background: var(--on-primary); color: var(--primary); }
+
+.guarantee-explainer {
+  margin-top: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface-subtle);
+  border: 1px solid var(--hairline-soft);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink-secondary);
+}
 
 .quote-guarantee-note { display: flex; align-items: flex-start; gap: var(--space-sm); margin-top: var(--space-lg); max-width: 420px; }
 .quote-guarantee-note .guarantee-icon-badge { margin-top: 2px; }
@@ -409,6 +425,19 @@ main { display: block; }
 
 .profile-sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
 .sidebar-reassurance { margin-top: var(--space-xs); }
+
+.profile-cost {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--hairline-soft);
+}
+.profile-cost-title { margin: 0; }
+.profile-cost .field { width: 100%; }
 
 /* ============================================================
    Booking flow

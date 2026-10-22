@@ -58,6 +58,29 @@ function goToScreen(name) {
 }
 
 document.addEventListener("click", (e) => {
+  // Guarantee icon: toggle an inline explainer instead of letting the click
+  // bubble up to the mini-card's whole-card data-goto="profile" navigation.
+  const guaranteeToggle = e.target.closest("[data-guarantee-toggle]");
+  if (guaranteeToggle) {
+    const explainer = guaranteeToggle.closest(".mini-card-price").nextElementSibling;
+    const wasHidden = explainer.hidden;
+    document.querySelectorAll(".guarantee-explainer").forEach((el) => (el.hidden = true));
+    document
+      .querySelectorAll("[data-guarantee-toggle]")
+      .forEach((b) => b.setAttribute("aria-expanded", "false"));
+    if (wasHidden) {
+      explainer.hidden = false;
+      guaranteeToggle.setAttribute("aria-expanded", "true");
+    }
+    return;
+  }
+  if (!e.target.closest(".guarantee-explainer") && !e.target.closest("[data-guarantee-toggle]")) {
+    document.querySelectorAll(".guarantee-explainer").forEach((el) => (el.hidden = true));
+    document
+      .querySelectorAll("[data-guarantee-toggle]")
+      .forEach((b) => b.setAttribute("aria-expanded", "false"));
+  }
+
   const gotoEl = e.target.closest("[data-goto]");
   if (gotoEl) {
     goToScreen(gotoEl.getAttribute("data-goto"));
@@ -233,6 +256,50 @@ function fillSummaryPrice() {
     <span class="summary-price-amount">$20</span>
   `;
 }
+
+// ---------------------------------------------------------------
+// Provider profile — "what will you pay" cost check (single provider)
+// ---------------------------------------------------------------
+const PROFILE_PROVIDER_RATES = [
+  { match: /aetna/i, amount: 20, label: "Aetna" },
+  { match: /cigna/i, amount: 25, label: "Cigna" },
+  { match: /united/i, amount: 30, label: "UnitedHealthcare" },
+  { match: /blue\s*cross|bcbs/i, amount: 22, label: "Blue Cross Blue Shield" },
+  { match: /humana/i, amount: 18, label: "Humana" },
+  { match: /medicaid/i, amount: 0, label: "Medicaid" },
+];
+
+function lookupProviderRate(insurerRaw) {
+  const insurer = insurerRaw.trim();
+  const found = PROFILE_PROVIDER_RATES.find((r) => r.match.test(insurer));
+  if (found) return found;
+  if (insurer) return { amount: 20, label: insurer };
+  return { amount: 20, label: "your plan" };
+}
+
+document.addEventListener("click", (e) => {
+  const checkBtn = e.target.closest("[data-profile-cost-check]");
+  if (checkBtn) {
+    const sidebar = checkBtn.closest(".profile-sidebar");
+    const insurer = sidebar.querySelector("#profile-insurer").value;
+    const rate = lookupProviderRate(insurer);
+
+    sidebar.querySelector("[data-profile-cost-amount]").textContent = "$" + rate.amount;
+    sidebar.querySelector("[data-profile-cost-label]").textContent = "per session with " + rate.label;
+
+    sidebar.querySelector("[data-profile-cost-default]").hidden = true;
+    sidebar.querySelector("[data-profile-cost-result]").hidden = false;
+    return;
+  }
+
+  const resetBtn = e.target.closest("[data-profile-cost-reset]");
+  if (resetBtn) {
+    const sidebar = resetBtn.closest(".profile-sidebar");
+    sidebar.querySelector("[data-profile-cost-result]").hidden = true;
+    sidebar.querySelector("[data-profile-cost-default]").hidden = false;
+    return;
+  }
+});
 
 // ---------------------------------------------------------------
 // Init
