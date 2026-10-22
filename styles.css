@@ -202,6 +202,7 @@ main { display: block; }
 .card-price { text-align: right; }
 .card-price-amount { font-family: var(--font-sans); font-size: 28px; font-weight: 800; color: var(--primary); line-height: 1; }
 .card-price-caption { display: block; margin-top: 2px; font-size: 12px; line-height: 1.33; color: var(--ink-muted); }
+.card-price-installment { display: block; margin-top: 2px; font-size: 12px; line-height: 1.33; color: var(--accent-link); font-weight: 550; }
 .card-price-sidebar { text-align: left; margin: var(--space-sm) 0; }
 
 .avatar {
