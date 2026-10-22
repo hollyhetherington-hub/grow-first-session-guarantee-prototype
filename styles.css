@@ -270,8 +270,21 @@ main { display: block; }
 .mini-card-name { margin-top: var(--space-sm); }
 .rating-row-sm { margin-top: 2px; }
 .mini-card-specialty { margin-top: var(--space-xs); }
-.mini-card-price { margin-top: var(--space-xs); color: var(--ink-secondary); }
-.guarantee-inline { color: var(--primary); font-weight: 650; }
+.mini-card-price { margin-top: var(--space-xs); display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.mini-card-amount { font-size: 14px; font-weight: 650; color: var(--ink); }
+.mini-card-price-label { font-size: 12px; color: var(--ink-muted); }
+.guarantee-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--accent-ziggy);
+  color: var(--on-primary);
+  flex-shrink: 0;
+}
+.guarantee-icon-badge .icon { width: 11px; height: 11px; }
 
 /* Stat band (evolves the existing "average session cost" tile) */
 .stat-band { max-width: 1120px; margin: 0 auto; padding: var(--space-section-sm) var(--space-xxl); }
